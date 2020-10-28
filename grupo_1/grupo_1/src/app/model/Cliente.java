@@ -11,6 +11,7 @@ public class Cliente implements Serializable {
 	
 	private String nome;
 	private String telefone;
+        private int id;
 	
 	public Cliente() {
 		this.nome = "";
@@ -20,6 +21,13 @@ public class Cliente implements Serializable {
 	public Cliente(String nome, String telefone) {
 		this.nome = nome;
 		this.telefone = telefone;
+	}
+        public int getId() {
+		return id;
+	}
+	
+	public void setId(int id) {
+		this.id = id;
 	}
 	
 	public String getNome() {
@@ -38,6 +46,7 @@ public class Cliente implements Serializable {
 		this.telefone = telefone;
 	}
 	
+        
 	public Collection<String> validaCampos() {
 		List<String> camposInvalidos = new ArrayList<String>();
 		
